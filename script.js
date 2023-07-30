@@ -38,3 +38,22 @@ logo.addEventListener('click', showBanner);
 about.addEventListener('click', showAboutMe);
 skills.addEventListener('click', showSkills);
 contact.addEventListener('click', showContact);
+
+
+let eng = document.getElementById('eng-flag');
+let fin = document.getElementById('fin-flag');
+
+let engText = document.getElementsByClassName('eng')[0];
+let finText = document.getElementsByClassName('fin')[0];
+
+let showEng = function() {
+    engText.style.display = 'flex';
+    finText.style.display = 'none';
+}
+let showFin = function() {
+    engText.style.display = 'none';
+    finText.style.display = 'flex';
+}
+
+eng.addEventListener('click', showEng);
+fin.addEventListener('click', showFin);
