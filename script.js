@@ -1,4 +1,4 @@
-let logo = document.getElementById('logo-full');
+let logo = document.getElementsByClassName('logo')[0];
 let about = document.getElementById('about');
 let skills = document.getElementById('skills');
 let contact = document.getElementById('contact');
