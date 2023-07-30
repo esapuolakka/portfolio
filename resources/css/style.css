@@ -31,6 +31,7 @@ header a {
     transition: background-color 100ms ease-in;
     transition: box-shadow 100ms ease-in;
 }
+
 p {
     color: black;
 }
@@ -202,6 +203,7 @@ main {
 }
 
 .contact {
+    display: flex;
     position: relative;
     top: 5rem;
     width: 100%;

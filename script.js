@@ -1,12 +1,12 @@
 let logo = document.getElementById('logo-full');
 let about = document.getElementById('about');
-let skills = document.querySelector('skills');
-let contact = document.querySelector('contact');
+let skills = document.getElementById('skills');
+let contact = document.getElementById('contact');
 
-let toBanner = document.getElementsByClassName('banner');
-let toAbout = document.getElementsByClassName('about-me');
-let toSkills = document.getElementsByClassName('skills');
-let toContact = document.getElementsByClassName('contact');
+let toBanner = document.getElementsByClassName('banner')[0];
+let toAbout = document.getElementsByClassName('about-me')[0];
+let toSkills = document.getElementsByClassName('skills')[0];
+let toContact = document.getElementsByClassName('contact-content')[0];
 
 
 let showBanner = function() {
