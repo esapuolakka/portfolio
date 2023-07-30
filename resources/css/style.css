@@ -444,6 +444,10 @@ footer {
         width: 16%;
     }
 
+    .skills-content {
+        width: 100%;
+    }
+
 
     .contact-content {
         display: flex;
