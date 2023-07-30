@@ -132,18 +132,47 @@ main {
 .banner {
     display: flex;
     position: relative;
+    flex-direction: column;
     top: 5.5rem;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    z-index: -1;
+    z-index: 0;
+}
+.banner-content {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
 }
 .self-container {
-    width: 70%;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    
 }
 #self {
     width: 100%;
 }
+
+.self-text-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.self-text-content p {
+    color: white;
+    margin: 3rem;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+
 
 .about-me {
     display: flex;
