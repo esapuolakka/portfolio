@@ -175,7 +175,7 @@ main {
 
 
 .about-me {
-    display: flex;
+    display: none;
     position: relative;
     top: 5rem;
     justify-content: center;
@@ -222,7 +222,7 @@ main {
 }
 
 .skills {
-    display: flex;
+    display: none;
     position: relative;
     top: 5rem;
     justify-content: center;
@@ -285,7 +285,7 @@ main {
 }
 
 .contact-content {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     width: 70%;
