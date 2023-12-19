@@ -1,18 +1,8 @@
-/*
-colors  #6A918D
-        #C3DEDB
-        #DECFB8
-        #6A6C91
-        #ADAFDE
-
-font-family: 'Chakra Petch', sans-serif;
-font-family: 'Lobster', cursive;
-font-family: 'Roboto', sans-serif;
-*/
-
-/* {
-    border: 1px solid green;
-}*/
+:root {
+    --body-bg: rgb(25, 34, 40);
+    --header-bg: linear-gradient(to right, #ddd9d3, #DECFB8);
+    --content-bg: linear-gradient(to right, #cedcdaca, #c3dedbc7);
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -31,17 +21,23 @@ h2 {
     text-transform: uppercase;
 }
 
-.eng {
+h3 {
+    font-size: 2rem;
+    color: rgb(248, 252, 255);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.eng-text {
     display: flex;
 }
-.fin {
+.fin-text {
     display: none;
 }
 
 
 header {
     position: fixed;
-    background-image: linear-gradient(to right, #ddd9d3, #DECFB8);
+    background-image: var(--header-bg);
     height: 5rem;
     width: 100%;
     margin: 0;
@@ -163,16 +159,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem;
 }
 
 .self-text-content p {
     color: white;
-    margin: 3rem;
+    margin: 1rem;
     text-align: center;
     letter-spacing: .5rem;
 }
-
-
 
 .about-me {
     display: none;
@@ -184,7 +179,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 70%;
-    background-image: linear-gradient(to right, #cedcdaca, #c3dedbc7);
+    background-image: var(--content-bg);
     
 }
 .text-image {
@@ -231,7 +226,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 40rem;
-    background-image: linear-gradient(to right, #cedcdaca, #c3dedbc7);
+    background-image: var(--content-bg);
     width: 70%;
 }
 .icon-content {
@@ -240,7 +235,7 @@ main {
     flex-wrap: wrap;
     width: 100%;
     height: 30%;
-    justify-content: start;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -264,8 +259,12 @@ main {
 
 .icon-content .icon-container img {
     width: 90%;
-    margin: 1rem;
+    min-width: 40px;
+    margin: 0.1rem;
+    padding: .1rem;
+    border-radius: 25%;
     height: auto;
+    background-color: rgb(25, 34, 40, 0.5);
     scale: 1;
     filter: grayscale(100%);
     transition: filter 100ms ease-in;
@@ -274,14 +273,33 @@ main {
 }
 .icon-content .icon-container img:hover {
     filter: none;
-    scale: 1.5;
-    background-color: rgb(25, 34, 40, 0.5);
-    padding: .2rem;
+    scale: 1.8;
+    padding: .4rem;
+    /* background-color: rgb(25, 34, 40, 0.5); */
+    background-color: #FFF;
 }
 
 .icon-content .icon-container img:active {
-    scale: 1.2;
+    scale: 1.5;
     transition: scale 10ms;
+}
+
+#show-skill-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg);
+    height: 5rem;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#show-skill-name.visible {
+    opacity: .9;
 }
 
 .contact {
@@ -297,7 +315,7 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 70%;
-    background-image: linear-gradient(to right, #cedcdaca, #c3dedbc7);
+    background-image: var(--content-bg);
 }
 #contact-me {
     margin-bottom: 6rem;
@@ -379,7 +397,7 @@ footer {
     display: flex;
     width: 100%;
     height: 5rem;
-    background-image: linear-gradient(to right, #ddd9d3, #DECFB8);
+    background-image: var(--header-bg);
 }
 .footer-content {
     display: grid;

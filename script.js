@@ -9,6 +9,8 @@ let toSkills = document.getElementsByClassName('skills')[0];
 let toContact = document.getElementsByClassName('contact-content')[0];
 
 
+// Show page content
+
 let showBanner = function() {
     toBanner.style.display = 'flex';
     toAbout.style.display = 'none';
@@ -40,11 +42,13 @@ skills.addEventListener('click', showSkills);
 contact.addEventListener('click', showContact);
 
 
+// Language select
+
 let eng = document.getElementById('eng-flag');
 let fin = document.getElementById('fin-flag');
 
-let engText = document.getElementsByClassName('eng')[0];
-let finText = document.getElementsByClassName('fin')[0];
+let engText = document.getElementsByClassName('eng-text')[0];
+let finText = document.getElementsByClassName('fin-text')[0];
 
 let showEng = function() {
     engText.style.display = 'flex';
@@ -58,6 +62,62 @@ let showFin = function() {
 eng.addEventListener('click', showEng);
 fin.addEventListener('click', showFin);
 
+
+
+// Show skill texts
+
+let elements = [
+    { id: "html", name: "HTML" },
+    { id: "css", name: "CSS" },
+    { id: "js", name: "JavaScript" },
+    { id: "node", name: "Node.js" },
+    { id: "npm", name: "Node Package Manager" },
+    { id: "react", name: "React" },
+    { id: "chrome", name: "Chrome DevTools" },
+    { id: "github", name: "GitHub" },
+    { id: "cli", name: "Command Line" },
+    { id: "cpp", name: "C++" },
+    { id: "java", name: "Java" },
+    { id: "dotnet", name: ".NET" },
+    { id: "liferay", name: "Liferay" },
+    { id: "slack", name: "Slack" },
+    { id: "atlassian", name: "Jira"},
+    { id: "trello", name: "Trello"}
+];
+let skillContainer = document.getElementById('show-skill-name');
+let skillName = document.createElement('h3');
+
+const showSkillName = (elementName) => {
+    let newSkillName = document.createElement('h3');
+    skillName.innerHTML = elementName;
+
+
+    let randomColor = () => Math.floor(Math.random() * 157 + 100);
+    let randomRGB = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+    newSkillName.style.color = randomRGB;
+
+    skillContainer.appendChild(newSkillName);
+
+    skillContainer.classList.add('visible');
+
+    clearTimeout(skillContainer.timerId);
+
+    skillContainer.timerId = setTimeout(() => {
+        skillContainer.classList.remove('visible');
+    }, 2200);
+}
+
+elements.forEach(element => {
+    let selected = document.getElementById(element.id);
+    if (selected) {
+        selected.addEventListener('click', () => showSkillName(element.name));
+        skillContainer.appendChild(skillName);
+    } else {
+        console.error(`Element with ID ${element.id} not found`);
+    }
+});
+
+//Submit form
 const sendMessage = () => {
     return alert('Message sent (not really)');
 }
