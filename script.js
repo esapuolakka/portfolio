@@ -57,3 +57,11 @@ let showFin = function() {
 
 eng.addEventListener('click', showEng);
 fin.addEventListener('click', showFin);
+
+const sendMessage = () => {
+    return alert('Message sent (not really)');
+}
+
+let submitForm = document.getElementById("send-form");
+
+submitForm.addEventListener('click', sendMessage);

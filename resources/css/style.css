@@ -258,11 +258,12 @@ main {
 .icon-content .icon-container {
     width:4%;
     height: 4%;
-    margin: 1rem;
+    margin: .5rem;
+    padding: 1rem;
 }
 
 .icon-content .icon-container img {
-    width: 100%;
+    width: 90%;
     margin: 1rem;
     height: auto;
     scale: 1;
@@ -273,7 +274,14 @@ main {
 }
 .icon-content .icon-container img:hover {
     filter: none;
+    scale: 1.5;
+    background-color: rgb(25, 34, 40, 0.5);
+    padding: .2rem;
+}
+
+.icon-content .icon-container img:active {
     scale: 1.2;
+    transition: scale 10ms;
 }
 
 .contact {
@@ -338,10 +346,6 @@ form {
     flex-direction: column;
     color: #edeff4;
 }
-form {
-    display: flex;
-    flex-direction: column;
-}
 
 label {
     font-weight: bold;
@@ -357,7 +361,7 @@ input, textarea {
 
 button {
     padding: 10px 20px;
-    background-color: #4676a9;
+    background-color: #46a948;
     color: white;
     border: none;
     border-radius: 4px;
@@ -366,7 +370,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #026707;
 }
 
 footer {
